@@ -1,13 +1,12 @@
 <?php
-
-	if (!empty($_POST)){
-		require_once('../config/dbConfig.php');
-		$dateYear = $_POST['year'];
-		$dateMonth = $_POST['month'];
-	} else {
+	if (empty($_POST)){
 		$dateYear = ($year != '')?$year:date("Y");
 		$dateMonth = ($month != '')?$month:date("m");
 		$db = $GLOBALS['db'];
+	} else {
+		require_once('../config/dbConfig.php');
+		$dateYear = $_POST['year'];
+		$dateMonth = $_POST['month'];
 	}
 
 	$date = $dateYear.'-'.$dateMonth.'-01';
@@ -48,14 +47,14 @@
 
 						$eventNum = 0;
 
-						$result = $db->query("SELECT TITLE FROM event WHERE STARTDATE LIKE '".$currentDate."%'");
-						
+						$result = $db->query("SELECT TITLE FROM event WHERE STARTDATE LIKE '".$currentDate."%' OR ENDDATE LIKE '".$currentDate."%'");
+
 						$eventNum = $result->num_rows;
 
 						if(strtotime($currentDate) == strtotime(date("Y-m-d"))){
 							echo '<li date="'.$currentDate.'" class="grey date_cell">';
 						}elseif($eventNum > 0){
-							echo '<li date="'.$currentDate.'" class="light_sky date_cell"><a href="app/event.php">events ('.$eventNum.')</a>';
+							echo '<li date="'.$currentDate.'" class="light_sky date_cell"><a href="app/event.php?date='.$currentDate.'">events ('.$eventNum.')</a>';
 						}else{
 							echo '<li date="'.$currentDate.'" class="date_cell">';
 						}
