@@ -1,12 +1,18 @@
 function getCalendar(target_div,year,month){
 	$.ajax({
 		type:'POST',
-		url:'calendar.php',
-		data:'func=showCalendar&year='+year+'&month='+month,
+		url: 'app/getCalendar.php',
+		dataType: 'html',
+		data: {	
+			'year' : year,
+			'month' : month
+		},
 		success:function(html){
+			console.log(html);
 			$('#'+target_div).html(html);
 		}
 	});
+	return false;
 }
 
 $(document).ready(function(){
