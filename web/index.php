@@ -19,7 +19,7 @@
 	?>
 </div>
 
-
+<div> <a href="app/addEvent.php">Add event</a></div>
 
 
 </body>

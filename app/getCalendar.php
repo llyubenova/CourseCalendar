@@ -74,8 +74,9 @@
 			?>
 			</ul>
 		</div>
-	</div>
 
+	</div>
+<div> <a href="app/addEvent.php">Add event</a></div>
 <?php
 function getAllMonths($selected = ''){
 	$options = '';
