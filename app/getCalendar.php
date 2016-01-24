@@ -41,12 +41,15 @@
 				$dayCount = 1; 
 				for($cb=1;$cb<=$boxDisplay;$cb++){
 					if(($cb >= $currentMonthFirstDay+1 || $currentMonthFirstDay == 7) && $cb <= ($totalDaysOfMonthDisplay)){
+						if ($dayCount < 10) {
+							$dayCount = '0'.$dayCount;
+						}
 						$currentDate = $dateYear.'-'.$dateMonth.'-'.$dayCount;
 
 						$eventNum = 0;
 
-						$result = $db->query("SELECT title FROM events WHERE date = '".$currentDate."' AND status = 1");
-
+						$result = $db->query("SELECT TITLE FROM event WHERE STARTDATE LIKE '".$currentDate."%'");
+						
 						$eventNum = $result->num_rows;
 
 						if(strtotime($currentDate) == strtotime(date("Y-m-d"))){
