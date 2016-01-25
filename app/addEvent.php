@@ -109,8 +109,8 @@
 				<input type="text" id="lecturer" name="lecturer" value ="<?php if (isset($_POST['lecturer'])) { echo $_POST['lecturer']; } ?>" />
 			</div>
 
-			<input type="submit" name="submit" value="Submit" class = "submit">
-			<a href="../index.php">Cancel</a>
+			<input type="submit" name="submit" value="Submit" class="button">
+			<a href="../index.php"><button class="button">Cancel</button></a>
 		</form>
 
 	</body>

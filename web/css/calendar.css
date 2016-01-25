@@ -184,8 +184,10 @@ span.error {
   width: 150px; 
 }
 
-.submit{
-  font-size:20px;
+.event_create_form .button {
+    width:120px;
+    height:30px;
+    font-size: 20px;
 }
 
 .event_create_form a{
