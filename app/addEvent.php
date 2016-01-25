@@ -73,7 +73,7 @@
 
 			<div>
 				<label for="description" class="description_label">Description: </label>
-				<textarea id="description" name="description" > <?php if (isset($_POST['description'])) { echo $_POST['description']; } ?></textarea>
+				<textarea id="description" name="description"><?php if (isset($_POST['description'])) { echo $_POST['description']; } ?></textarea>
 				<span class="error"><?php echo $descriptionError; ?></span>
 			</div>
 
