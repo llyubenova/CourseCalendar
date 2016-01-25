@@ -150,3 +150,44 @@ a, a:visited {
 .event_body p span:not('.italic') {
     font-weight: bold;
 }
+
+
+.event_create_form{
+    font-size: 20px;
+}
+
+span.error {
+    color: #f00;
+}
+
+.event_create_form div{
+    margin-bottom: 20px;
+}
+
+.event_create_form select{
+    width:170;
+    height:30px
+}
+
+.event_create_form input{
+    width:170;
+    height:30px;
+}
+
+.event_create_form textarea{
+    width:170;
+    height:60px;
+}
+
+.event_create_form label{
+  display: inline-block;
+  width: 150px; 
+}
+
+.submit{
+  font-size:20px;
+}
+
+.event_create_form a{
+  margin-left:50px;
+}

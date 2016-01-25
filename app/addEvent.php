@@ -2,7 +2,7 @@
 	<head>
 		 <link rel="stylesheet" href="../lib/css/jquery-ui.css">
 		 <link rel="stylesheet" href="../lib/css/jquery-ui-timepicker-addon.css">
-		 <link type="text/css" rel="stylesheet" href="../web/css/event.css" />
+		 <link type="text/css" rel="stylesheet" href="../web/css/calendar.css" />
 		<style type="text/css">
 			
 		</style>
