@@ -1,1 +1,2 @@
-# CourseCalendar
+# Course Project for WWW Technologies
+№ Course Calendar that holds information about all events related to specific course like exams, papers, homeworks, presentations, lectures, guest lecturers, etc. It gives the students and teachers (lecturer, assistant professors and guest lecturers) the opportunity to monitor events that interest them.

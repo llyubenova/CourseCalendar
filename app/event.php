@@ -1,5 +1,7 @@
 <html>
 <head>
+	<title>Course Calendar</title>
+	<meta charset="UTF-8">
 	<link rel="stylesheet" href="../web/css/calendar.css" />
 </head>
 <body>

@@ -1,11 +1,10 @@
 <html>
 	<head>
-		 <link rel="stylesheet" href="../lib/css/jquery-ui.css">
-		 <link rel="stylesheet" href="../lib/css/jquery-ui-timepicker-addon.css">
-		 <link type="text/css" rel="stylesheet" href="../web/css/calendar.css" />
-		<style type="text/css">
-			
-		</style>
+		<title>Course Calendar</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../lib/css/jquery-ui.css">
+		<link rel="stylesheet" href="../lib/css/jquery-ui-timepicker-addon.css">
+		<link type="text/css" rel="stylesheet" href="../web/css/calendar.css" />
 	</head>
 	<body>
 		<script src="../lib/js/jquery.min.js"></script>

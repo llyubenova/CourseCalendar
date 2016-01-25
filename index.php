@@ -1,6 +1,8 @@
 <html>
 <head>
-	<link type="text/css" rel="stylesheet" href="web/css/calendar.css" />
+	<title>Course Calendar</title>
+	<meta charset="UTF-8">
+	<link type="text/css" rel="stylesheet" href="web/css/calendar.css"/>
 </head>
 <body>
 	<script src="lib/js/jquery.min.js"></script>
