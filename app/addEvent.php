@@ -110,7 +110,7 @@
 			</div>
 
 			<input type="submit" name="submit" value="Submit" class="button">
-			<a href="../index.php"><button class="button">Cancel</button></a>
+			<a href="../index.php"> <input type="button" class = "button" value="Cancel"/></a>
 		</form>
 
 	</body>
