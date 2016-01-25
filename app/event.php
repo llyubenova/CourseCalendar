@@ -1,6 +1,7 @@
 <html>
 <head>
 	<link rel="stylesheet" href="../web/css/calendar.css" />
+	<link rel="stylesheet" href="../web/css/event.css" />
 </head>
 <body>
 	<?php

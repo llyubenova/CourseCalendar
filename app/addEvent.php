@@ -2,10 +2,9 @@
 	<head>
 		 <link rel="stylesheet" href="../lib/css/jquery-ui.css">
 		 <link rel="stylesheet" href="../lib/css/jquery-ui-timepicker-addon.css">
+		 <link type="text/css" rel="stylesheet" href="../web/css/event.css" />
 		<style type="text/css">
-			.error {
-				color: #f00;
-			}
+			
 		</style>
 	</head>
 	<body>
@@ -60,7 +59,7 @@
 			}
 
 		?>
-		<form method="post" action="addEvent.php">
+		<form class="event_create_form" method="post" action="addEvent.php">
 			<div>
 				<label for="title">*Title:</label>
 				<input type="text" id="title" name="title" value = "<?php if (isset($_POST['title'])) { echo $_POST['title']; } ?>" />
@@ -69,7 +68,7 @@
 			</div>
 
 			<div>
-				<label for="description">Description: </label>
+				<label for="description" class="description_label">Description: </label>
 				<textarea id="description" name="description" > <?php if (isset($_POST['description'])) { echo $_POST['description']; } ?></textarea>
 				<span class="error"><?php echo $descriptionError; ?></span>
 			</div>
@@ -85,7 +84,7 @@
 				  <option value="PRACTICE">Practice</option>
 				  <option value="EVENT">Event</option>
 				</select>
-
+			</div>
 			<div>
 				<label>Start date: </label> <input type="text" class="datepicker" name="startdate" value ="<?php if (isset($_POST['startdate'])) { echo $_POST['startdate']; } ?>" />
 			</div>
@@ -105,7 +104,9 @@
 				<input type="text" id="lecturer" name="lecturer" value ="<?php if (isset($_POST['lecturer'])) { echo $_POST['lecturer']; } ?>" />
 			</div>
 
-			<input type="submit" name="submit" value="Submit">
+			<input type="submit" name="submit" value="Submit" class = "submit">
+			<a href="../index.php">Cancel</a>
 		</form>
+
 	</body>
 </html>
