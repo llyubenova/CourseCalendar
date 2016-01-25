@@ -1,20 +1,23 @@
 <?php
-	if (empty($_POST)){
-		$dateYear = ($year != '')?$year:date("Y");
-		$dateMonth = ($month != '')?$month:date("m");
-		$db = $GLOBALS['db'];
-	} else {
+	if (!empty($_POST)){
 		require_once('../config/dbConfig.php');
 		$dateYear = $_POST['year'];
 		$dateMonth = $_POST['month'];
-	}
-
+	} else {
+		$dateYear = ($year != '')?$year:date("Y");
+		$dateMonth = ($month != '')?$month:date("m");
+		$db = $GLOBALS['db'];
+	} 
+	
 	$date = $dateYear.'-'.$dateMonth.'-01';
 	$currentMonthFirstDay = date("N", strtotime($date));
 	$totalDaysOfMonth = cal_days_in_month(CAL_GREGORIAN, $dateMonth,$dateYear);
 	$totalDaysOfMonthDisplay = ($currentMonthFirstDay == 7) ? ($totalDaysOfMonth) : ($totalDaysOfMonth + $currentMonthFirstDay);
 	$boxDisplay = ($totalDaysOfMonthDisplay <= 35) ? 35 : 42;
 ?>
+	<div id="add_event_link"> 
+		<a href="app/addEvent.php">Add event</a>
+	</div>
 	<div class="calendar_section">
 		<div class="section_header">
         	<a href="javascript:void(0);" onclick="getCalendar('calendar_div','<?php echo date("Y",strtotime($date.' - 1 Month')); ?>','<?php echo date("m",strtotime($date.' - 1 Month')); ?>');">&lt;&lt;</a>
@@ -80,10 +83,11 @@
 				} 
 				echo $calendarBuilder;
 			?>
+
 			</tbody>
 		</table>
 	</div>
-
+	
 <?php
 function getAllMonths($selected = ''){
 	$options = '';

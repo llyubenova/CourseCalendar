@@ -30,6 +30,7 @@ a, a:visited {
 .calendar_section {
     width: 700px;
     margin: 30px auto 0;
+    color: #808080;
 }
 
 .section_header {
@@ -38,10 +39,13 @@ a, a:visited {
     color: #444444;
     font-size: 17px;
     line-height: 50px;
+    border: 1px solid #cccccc;
+    border-bottom: none;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     text-align: center;
     padding: 5px;
+    box-sizing: border-box;
 }
 
 .section_header a {
@@ -67,11 +71,11 @@ a, a:visited {
 .calendar_table thead {
     background-color: #f1f1f1;
     line-height: 40px;
+    border: 1px solid #cccccc;
 }
 
 .calendar_table tr td  {
-    color: #808080;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
     border-collapse: collapse;
     width: 100px;
     height: 80px;
@@ -86,7 +90,6 @@ a, a:visited {
 }
 
 .dropdown {
-    color: #808080;
     font-size: 20px;
     border-radius: 5px;
     margin-left: 5px;
@@ -96,8 +99,21 @@ a, a:visited {
 .today {
     background-color: #f1f1f1;
 }
+
 .event_date {
     background-color: #37b8eb;
+}
+
+#add_event_link {
+    color: #808080;
+    float: right;
+    margin-right: 150px;
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+#add_event_link a {
+    color: #808080;
 }
 
 
