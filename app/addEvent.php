@@ -54,6 +54,11 @@
 				}
 				if($hasError == false)
 				{
+					 require_once('../config/dbConfig.php');
+					$db->query("INSERT INTO event()
+					VALUES
+					('$_POST[type]','$_POST[startdate]','$_POST[enddate]','$_POST[title]','$_POST[description]','$_POST[lector]','$_POST[location]')");
+					
 					header("Location: ../index.php");
 				}
 			}
