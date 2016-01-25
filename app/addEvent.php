@@ -25,7 +25,7 @@
 		    var day = date.getDate();
 		    var month = date.getMonth() + 1;
 		    var year = date.getFullYear().toString().slice(2);
-		    return day + '-' + month + '-' + year;
+		    return year + '-' + month + '-' + day;
 		}
 		});
   </script>
@@ -33,26 +33,32 @@
 			$titleError = "";
 			$endDateError = "";
 			$descriptionError = "";
+			
 
 			if(isset($_POST['submit'])){
+				$hasError = false;
 				$title = isset($_POST["title"]) ? $_POST["title"] : "";
 				$endDate = isset($_POST["enddate"]) ? $_POST["enddate"] : "";
 				$description = isset($_POST["description"]) ? $_POST["description"] : "";
-				$startDate = isset($_POST["startdate"]) ? $_POST["startdate"] : "";
-				$type = isset($_POST["type"]) ? $_POST["type"] : "";
-				$lecturer = isset($_POST["lecturer"]) ? $_POST["lecturer"] : "";
-				$location = isset($_POST["location"]) ? $_POST["location"] : "";
+
 				if (empty($title) || strlen($title) > 50) {
 					$titleError = "Invalid title.";
+					$hasError = true;
 				}
 				if (strlen($description) > 300) {
 					$descriptionError = "Invalid description.";
+					$hasError = true;
 				}
 				if (empty($endDate)) {
 					$endDateError = "End date is required.";
+					$hasError = true;
 				}
-				
+				if($hasError == false)
+				{
+					header("Location: ../index.php");
+				}
 			}
+
 		?>
 		<form method="post" action="addEvent.php">
 			<div>

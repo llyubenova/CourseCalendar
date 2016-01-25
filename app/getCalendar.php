@@ -4,16 +4,11 @@
 		$dateYear = $_POST['year'];
 		$dateMonth = $_POST['month'];
 	} else {
-	if (empty($_POST)){
 		$dateYear = ($year != '')?$year:date("Y");
 		$dateMonth = ($month != '')?$month:date("m");
 		$db = $GLOBALS['db'];
-	} else {
-		require_once('../config/dbConfig.php');
-		$dateYear = $_POST['year'];
-		$dateMonth = $_POST['month'];
-	}
-
+	} 
+	
 	$date = $dateYear.'-'.$dateMonth.'-01';
 	$currentMonthFirstDay = date("N",strtotime($date));
 	$totalDaysOfMonth = cal_days_in_month(CAL_GREGORIAN,$dateMonth,$dateYear);
