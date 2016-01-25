@@ -1,5 +1,4 @@
 <?php
-
 	if (!empty($_POST)){
 		require_once('../config/dbConfig.php');
 		$dateYear = $_POST['year'];
